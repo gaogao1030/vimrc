@@ -1,46 +1,48 @@
 set nocompatible               " be iMproved
   filetype off                   " required!
+	syntax on
+	set ts=2
 
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
+ set rtp+=~/.vim/bundle/vundle.vim
+ call vundle#begin()
 
  " let Vundle manage Vundle
  " required! 
- Bundle 'gmarik/vundle'
+ Plugin 'gmarik/vundle'
 
- " My Bundles here:
+ " My Plugins here:
  "
  " original repos on github
- Bundle 'tpope/vim-fugitive'
- Bundle 'Lokaltog/vim-easymotion'
- Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
- Bundle 'tpope/vim-rails.git'
- Bundle 'scrooloose/nerdtree'
- Bundle 'kien/ctrlp.vim'
- Bundle 'msanders/snipmate.vim'
- Bundle 'mileszs/ack.vim'
- Bundle 'Shougo/neocomplcache.vim'
- Bundle 'Townk/vim-autoclose'
- Bundle 'Lokaltog/vim-easymotion'
- Bundle 'Lokaltog/vim-powerline'
+ Plugin 'tpope/vim-fugitive'
+ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+ Plugin 'tpope/vim-rails.git'
+ Plugin 'scrooloose/nerdtree'
+ Plugin 'kien/ctrlp.vim'
+ Plugin 'msanders/snipmate.vim'
+ Plugin 'mileszs/ack.vim'
+ Plugin 'Shougo/neocomplcache.vim'
+ Plugin 'Townk/vim-autoclose'
+ Plugin 'Lokaltog/vim-easymotion'
+ Plugin 'Lokaltog/vim-powerline'
  " vim-scripts repos
- Bundle 'L9'
- Bundle 'FuzzyFinder'
+ Plugin 'L9'
+ Plugin 'FuzzyFinder'
  " non github repos
- Bundle 'git://git.wincent.com/command-t.git'
+ Plugin 'git://git.wincent.com/command-t.git'
  " git repos on your local machine (ie. when working on your own plugin)
  " ...
 
+ call vundle#end()
  filetype plugin indent on     " required!
  "
  " Brief help
- " :BundleList          - list configured bundles
- " :BundleInstall(!)    - install(update) bundles
- " :BundleSearch(!) foo - search(or refresh cache first) for foo
- " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+ " :PluginList          - list configured bundles
+ " :PluginInstall(!)    - install(update) bundles
+ " :PluginSearch(!) foo - search(or refresh cache first) for foo
+ " :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
  "
  " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Bundle command are not allowed..
+ " NOTE: comments after Plugin command are not allowed..
 
  " NERDTree config
  map <F2> :NERDTreeToggle<CR>
@@ -63,7 +65,12 @@ set nocompatible               " be iMproved
  let g:EasyMotion_leader_key = '<Leader>'
 
  "powerline config
+ set t_Co=256
  set laststatus=2
- set t_Co=256   
  set encoding=utf-8  
  set fillchars+=stl:\ ,stlnc:\
+
+ "scheme
+colo molokai
+let g:molokai_original = 1 
+let g:rehash256 = 1
