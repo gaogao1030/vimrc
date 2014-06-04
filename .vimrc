@@ -1,6 +1,6 @@
-set nocompatible               " be iMproved
+	set nocompatible               " be iMproved
   filetype off                   " required!
-	syntax on
+	"syntax on
 	set ts=2
 
  set rtp+=~/.vim/bundle/vundle.vim
@@ -24,16 +24,19 @@ set nocompatible               " be iMproved
  Plugin 'Townk/vim-autoclose'
  Plugin 'Lokaltog/vim-easymotion'
  Plugin 'Lokaltog/vim-powerline'
+ Plugin 'kchmck/vim-coffee-script'
  " vim-scripts repos
  Plugin 'L9'
  Plugin 'FuzzyFinder'
  " non github repos
  Plugin 'git://git.wincent.com/command-t.git'
+ Plugin 'slim-template/vim-slim.git'
  " git repos on your local machine (ie. when working on your own plugin)
  " ...
 
  call vundle#end()
  filetype plugin indent on     " required!
+ syntax enable
  "
  " Brief help
  " :PluginList          - list configured bundles
