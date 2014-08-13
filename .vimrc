@@ -7,7 +7,7 @@
  call vundle#begin()
 
  " let Vundle manage Vundle
- " required! 
+ " required!
  Plugin 'gmarik/vundle'
 
  " My Plugins here:
@@ -31,6 +31,9 @@
  " non github repos
  Plugin 'git://git.wincent.com/command-t.git'
  Plugin 'slim-template/vim-slim.git'
+ Plugin 'AndrewRadev/vim-eco.git'
+ Plugin 'gaogao1030/vim-skim'
+ Plugin 'gaogao1030/vim-slimbars'
  " git repos on your local machine (ie. when working on your own plugin)
  " ...
 
@@ -59,9 +62,11 @@
  set nu
  set mouse=a
  set tabstop=2
- let mapleader = ","  
- let g:mapleader = ","  
- map Y "+y  
+ set shiftwidth=2
+ set expandtab
+ let mapleader = ","
+ let g:mapleader = ","
+ map Y "+y
  map P "+p  ""
 
  "easymotion
@@ -70,10 +75,10 @@
  "powerline config
  set t_Co=256
  set laststatus=2
- set encoding=utf-8  
+ set encoding=utf-8
  set fillchars+=stl:\ ,stlnc:\
 
  "scheme
 colo molokai
-let g:molokai_original = 1 
+let g:molokai_original = 1
 let g:rehash256 = 1
