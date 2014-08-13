@@ -1,9 +1,7 @@
-	set nocompatible               " be iMproved
-  filetype off                   " required!
-	"syntax on
-	set ts=2
+ set nocompatible               " be iMproved
+ filetype off                   " required!
 
- set rtp+=~/.vim/bundle/vundle.vim
+ set rtp+=~/.vim/bundle/Vundle.vim
  call vundle#begin()
 
  " let Vundle manage Vundle
@@ -57,6 +55,18 @@
  "neocomplache config
  let g:neocomplcache_enable_at_startup = 1
  let g:neocomplcache_force_overwrite_completefunc = 1
+
+ " Display extra whitespace
+  set list listchars=tab:»·,trail:·
+ "
+ fun! StripTrailingWhitespace()
+ " Don't strip on these filetypes
+  if &ft =~ 'markdown'
+    return
+  endif
+    %s/\s\+$//e
+  endfun
+ autocmd BufWritePre * call StripTrailingWhitespace()
 
  "other config
  set nu
