@@ -32,6 +32,9 @@
  Plugin 'AndrewRadev/vim-eco.git'
  Plugin 'gaogao1030/vim-skim'
  Plugin 'gaogao1030/vim-slimbars'
+ Plugin 'mustache/vim-mustache-handlebars'
+ Plugin 'digitaltoad/vim-jade'
+ Plugin 'groenewege/vim-less'
  " git repos on your local machine (ie. when working on your own plugin)
  " ...
 
