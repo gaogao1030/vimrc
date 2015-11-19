@@ -1,6 +1,8 @@
  set nocompatible               " be iMproved
  filetype off                   " required!
 
+
+
  set rtp+=~/.vim/bundle/Vundle.vim
  call vundle#begin()
 
@@ -12,6 +14,7 @@
  "
  " original repos on github
  Plugin 'tpope/vim-fugitive'
+ Plugin 'tpope/vim-haml'
  Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
  Plugin 'tpope/vim-rails.git'
  Plugin 'scrooloose/nerdtree'
@@ -35,6 +38,7 @@
  Plugin 'mustache/vim-mustache-handlebars'
  Plugin 'digitaltoad/vim-jade'
  Plugin 'groenewege/vim-less'
+ Plugin 'ldong/vim_loremipsum'
  " git repos on your local machine (ie. when working on your own plugin)
  " ...
 
@@ -81,6 +85,7 @@
  let g:mapleader = ","
  map Y "+y
  map P "+p  ""
+ "set mouse -=a
 
  "easymotion
  let g:EasyMotion_leader_key = '<Leader>'
@@ -98,7 +103,11 @@
   set nofoldenable        "dont fold by default
   set foldlevel=1         "this is just what i use
 
+  "解决webpack不更新文件问题 当文件被保存时候
+  set backupcopy=yes
+
  "scheme
 colo molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
+
